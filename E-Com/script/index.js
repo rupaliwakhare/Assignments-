@@ -289,5 +289,21 @@ function display() {
     let div = document.createElement("div");
     div.append(image, title, price, addcartbtn);
     main.append(div);
+    
   });
+  
+}
+let loginuser = JSON.parse(localStorage.getItem("loginuser"))
+let span = document.getElementById("user");
+let cred = document.getElementById("cred");
+
+
+if(loginuser){
+  cred.style.display="none"
+  let username = document.createElement("h2");
+  username.innerText = loginuser;
+
+  span.append(username);
+
+
 }

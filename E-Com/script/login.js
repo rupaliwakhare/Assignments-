@@ -1,6 +1,7 @@
 let form = document.querySelector("form");
 let signupData = JSON.parse(localStorage.getItem("signupData"));
 
+
 form.addEventListener("submit", loginfun);
 
 function loginfun() {
