@@ -1,74 +1,88 @@
 let form = document.querySelector("form");
+let name = document.getElementById("name");
+let id = document.getElementById("id");
+let specialization = document.getElementById("specialization");
+let experience = document.getElementById("experience");
+let email = document.getElementById("email")
+let mo = document.getElementById("mobile");
 let tbody = document.querySelector("tbody");
-form.addEventListener("submit", getData);
 
-let todo_arr = JSON.parse(localStorage.getItem("array")) || [];
+form.addEventListener("submit",getData)
 
-display(docter_arr);
+let doc_data = [];
 
-function getData() {
+function getData(){
+
   event.preventDefault();
-
-  let name = form.name.value;
-  let id = form.id.value;
-  let specialization = form.specialization.value;
-  let experience = form.experience.value;
-  let email = form.email.value;
-  let Mo = form.Mo.value;
-
   let doc_obj = {
-    Name,
-    Id,
-    Specialization,
-    Experience,
-    Email,
-    mo,
-    role,
-  };
+  name: name.value,
+  id: id.value,
+  specialization: specialization.value,
+  experience: experience.value,
+  email: email.value,
+  mo: mo.value
 
-  docter.push(doc_obj);
-  localStorage.setItem("array", JSON.stringify(docter_arr));
-  //   console.log(docter_arr);
+  }
+  // console.log(doc_obj);
+  
+  doc_data.push(doc_obj);
+  display(doc_data)
+  // console.log(doc_data);
 
-  display(docter_arr);
 }
 
 function display(data) {
   tbody.innerHTML = "";
 
-  for (let i = 0; i < data.length; i++) {
-    let row = document.createElement("tr");
-    let col1 = document.createElement("td");
-    col1.innerText = data[i].name;
-    let col2 = document.createElement("td");
-    // if (data[i]..toLowerCase() === "high") {
-    //   col2.style.backgroundColor = "red";
-    // } else if (data[i].priority.toLowerCase() === "low") {
-    //   col2.style.backgroundColor = "green";
-    // }
+  data.map(function(el,index){
+    let row =  document.createElement("tr");
 
-    col2.innerText = data[i].Id;
+    let col1 = document.createElement("td");
+    col1.innerText = el.name;
+
+    let col2 = document.createElement("td");
+    col2.innerText = el.id;
+
     let col3 = document.createElement("td");
-    col3.innerText = data[i].specialization;
+    col3.innerText = el.specialization;
+
     let col4 = document.createElement("td");
-    col4.innerText = data[i].email;
+    col4.innerText = el.experience;
+
     let col5 = document.createElement("td");
-    col5.innerText = data[i].mo;
+    col5.innerText = el.email;
+
     let col6 = document.createElement("td");
-    if (experience > 5) {
-      Senior;
-    } else if (experience >= 2 || experience <= 5) {
-      Junior;
-    }
-    col6.innerText = data[i].role;
+    col6.innerText = el.mo;
+
     let col7 = document.createElement("td");
-    col7.addEventListener("click", deletevalue);
-    col7.innerText = "Delete";
-    row.append(col1, col2, col3, col4, col4, col5, col6, col7);
-    tbody.append(row);
-  }
+    if (el.experience > 5) {
+      el.role = "Senior";
+    } else if (el.experience >= 2 && el.experience <= 5) {
+       el.role = "junier";
+    } else if (el.experience <= 1) {
+      el.role = "trainee";
+    }
+    col7.innerText = el.role;
+    // console.log(col7);
+    
+   
+    let col8 = document.createElement("td");
+    col8.addEventListener("click",delfun)
+    col8.innerText = "Delete";
+    col8.style.backgroundColor = "red";
+    col8.style.color = "white"
+    
+    
+    row.append(col1,col2,col3,col4,col5,col6,col7,col8)
+    tbody.append(row)
+    
+  })
+
+  
 }
 
-function deletevalue() {
-  event.target.parentNode.remove();
+function delfun (){
+  event.target.parentNode.remove()
+  // display(doc_data)
 }
