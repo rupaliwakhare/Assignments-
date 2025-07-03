@@ -2,6 +2,7 @@ let form = document.querySelector("form");
 let name = document.getElementById("name");
 let id = document.getElementById("id");
 let specialization = document.getElementById("specialization");
+console.log(specialization);
 let experience = document.getElementById("experience");
 let email = document.getElementById("email")
 let mo = document.getElementById("mobile");
@@ -23,7 +24,7 @@ function getData(){
   mo: mo.value
 
   }
-  // console.log(doc_obj);
+  console.log(doc_obj);
   
   doc_data.push(doc_obj);
   display(doc_data)
@@ -34,7 +35,7 @@ function getData(){
 function display(data) {
   tbody.innerHTML = "";
 
-  data.map(function(el,index){
+  data.map(function(el){
     let row =  document.createElement("tr");
 
     let col1 = document.createElement("td");
