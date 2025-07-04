@@ -21,7 +21,7 @@ function getData() {
     mail: mail.value,
     no: no.value,
   };
-//   console.log(Emp_obj);
+  console.log(Emp_obj);
 
   Emp_data.push(Emp_obj);
   display(Emp_data)

@@ -2,7 +2,7 @@ let form = document.querySelector("form");
 let name = document.getElementById("name");
 let id = document.getElementById("id");
 let specialization = document.getElementById("specialization");
-console.log(specialization);
+// console.log(specialization);
 let experience = document.getElementById("experience");
 let email = document.getElementById("email")
 let mo = document.getElementById("mobile");
@@ -24,7 +24,7 @@ function getData(){
   mo: mo.value
 
   }
-  console.log(doc_obj);
+  // console.log(doc_obj);
   
   doc_data.push(doc_obj);
   display(doc_data)
@@ -69,16 +69,16 @@ function display(data) {
     
    
     let col8 = document.createElement("td");
-    col8.addEventListener("click",delfun)
+    col8.addEventListener("click", delfun);
     col8.innerText = "Delete";
     col8.style.backgroundColor = "red";
-    col8.style.color = "white"
+    col8.style.color = "white";
     
     
-    row.append(col1,col2,col3,col4,col5,col6,col7,col8)
-    tbody.append(row)
+    row.append(col1, col2, col3, col4, col5, col6, col7, col8);
+    tbody.append(row);
     
-  })
+  });
 
   
 }
