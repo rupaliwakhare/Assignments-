@@ -1,0 +1,46 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body background and centering */
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  /* Main heading style */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  /* Time display box */
+  #show_time {
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 2px solid #ffffff44;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  
+  
+  /* Optional: subtle animation effect */
+  #show_time:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
