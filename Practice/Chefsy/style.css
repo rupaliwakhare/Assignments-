@@ -491,18 +491,11 @@ body {
   border-radius: 10px;
 }
 
-.container{
+
+.contanier{
   margin-top: 30px;
-  
 }
 .container-arrival{
-   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.explore-btn{
-  padding: 10px;
-  border-radius: 20px;
-  
-  
+ display: flex;
+ justify-content: space-between;
 }
