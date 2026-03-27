@@ -555,7 +555,35 @@ body {
   line-height: 1.5;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 }
 .card-text span{
   color: #312f2f;
+ 
+}
+.contanier-bottom{
+ 
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(192, 192, 37, 0.521);
+}
+.card-bottom{
+  width: 80%;
+  margin: auto;
+   display: grid;
+  grid-template-columns: repeat(4 ,1fr);
+  background-color: white;
+  gap: 20px;
+  
+
+}
+.contanier-bottom-card{
+ /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+ line-height: 1.5;
+ padding-bottom: 30px;
+ padding-left: 10px;
+
+}
+.contanier-bottom img{
+  width: 50px;
 }
