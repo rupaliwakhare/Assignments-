@@ -833,7 +833,7 @@ body {
   .arrival button:nth-child(3) {
     display: none;
   }
-  .arrival button:nth-child(40) {
+  .arrival button:nth-child(4) {
     display: none;
   }
  
@@ -898,20 +898,225 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .menu {
+    .menu {
     font-size: 30px;
     padding: 0px 10px;
   }
   .center h2 {
     font-weight: 200;
-    color: rgb(255, 166, 0);
+    letter-spacing: 2;
+    color: rgb(255, 123, 0);
   }
   .right a {
     text-decoration: none;
     color: #333;
     display: none;
   }
-  .right i {
-    width: 50px;
+  
+  .second-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    overflow-x: auto; /* scroll */
+    white-space: nowrap;
+    scroll-behavior: smooth;
   }
+  .second-row::-webkit-scrollbar {
+    display: none;
+  }
+  .dropdown-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: white;
+  }
+  .dropdown-wrapper i {
+    display: none;
+  }
+  .dropdown {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    letter-spacing: 2px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+
+  .search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 150px;
+  }
+  .chips {
+    display: flex;
+    gap: 10px;
+  }
+
+  .chips span {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: 2px;
+  }
+  .hero {
+    position: relative;
+    height: 20rem;
+    background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+      no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .content {
+    position: relative;
+    max-width: 800px;
+    /* z-index: 2; */
+  }
+
+  .content h1 {
+    font-size: 37px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    display: none;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #dddddd94;
+  }
+
+  .review {
+    position: absolute;
+    width: 250px;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+  }
+
+  .review-img {
+    display: flex;
+  }
+
+  .review-img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.397);
+    margin-left: -8px;
+    margin-top: 0;
+  }
+
+  .review p {
+    display: none;
+  }
+   .categories-cards {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+   .arrival button:nth-child(2) {
+    display: none;
+  }
+  .arrival button:nth-child(3) {
+    display: none;
+  }
+  .arrival button:nth-child(4) {
+    display: none;
+  }
+  .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+  }
+  .cart p{
+    font-size: 20px;
+  }
+  .cart-btn{
+    display: none;
+  }
+ .banner {
+  height: 600px;
+  background-image: url("https://cdn.pixabay.com/photo/2017/07/09/03/19/home-2486092_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.banner .text {
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  width: 80%;
+  padding: 10px;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 28px;
+  font-weight: 300;
+  border-radius: 10px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: auto;
+}
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+}
+.feature-box {
+  background: #fff;
+  width: 220px; 
+  padding: 25px 15px; 
+  text-align: start;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
 }
