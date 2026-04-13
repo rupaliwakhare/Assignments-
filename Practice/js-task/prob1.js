@@ -24,7 +24,30 @@
 
 // let b = "Hello"
 
-console.log(c);
+// console.log(c);
 
-const c = 40;
+// const c = 40;
 
+
+// let a;
+// console.log(a);
+
+// var b ;
+// console.log(b);
+
+value()
+//  let a = 30;
+function value (){
+    let a = 30;
+    console.log(a);
+    
+}
+add();
+const add = ()=>{
+    let a = 40;
+    let b = 30;
+    console.log(a+b);
+    
+}
+
+// add()
