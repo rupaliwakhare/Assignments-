@@ -17,3 +17,14 @@
 //  const b = 40;
 //  console.log(a+b);
  
+// console.log(a);
+// var a = 30;
+
+// console.log(b);
+
+// let b = "Hello"
+
+console.log(c);
+
+const c = 40;
+
