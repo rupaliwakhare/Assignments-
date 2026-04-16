@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Hover Effect</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">Hover Me</div>
+
+</body>
+
+<script>
+    let box = document.getElementById("box");
+
+    box.addEventListener("mouseover", function() {
+        box.style.backgroundColor = "orange";
+    });
+
+    box.addEventListener("mouseout", function() {
+        box.style.backgroundColor = "pink";
+    });
+</script>
+</html>
