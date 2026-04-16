@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Input Preview</title>
+</head>
+<body>
+
+    <input type="text" id="inputBox" placeholder="Type something...">
+    <h2 id="previewText">Preview Text Hare</h2>
+
+</body>
+
+<script>
+    let input = document.getElementById("inputBox");
+    let preview = document.getElementById("previewText");
+
+    input.addEventListener("input", function() {
+        preview.innerText = input.value;
+    });
+</script>
+</html>
